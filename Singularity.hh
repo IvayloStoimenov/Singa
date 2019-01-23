@@ -1,21 +1,17 @@
-Bootstrap:shub
+Bootstrap:docker
 From:ubuntu:latest  
 
 %labels
-MAINTAINER Ivast
-
-%post  
-echo "This section happens once after bootstrap to build the image."  
-apt-get update
-apt-get install -y build-essential
-apt-get install -y wget git curl
-apt-get install -y apt-transport-https
-
-cd /opt
-git clone https://github.com/IvayloStoimenov/Singa.git
-
+MAINTAINER Vanessasaur
+SPECIES Dinosaur
 
 %runscript
 echo "This gets run when you run the image!" 
-exec /bin/bash /opt/Singa
+exec /bin/bash /dia/Singa/Singa
 
+%post  
+echo "This section happens once after bootstrap to build the image."  
+ls
+mkdir -p /dia
+cd /dia
+git clone https://github.com/IvayloStoimenov/Singa.git
