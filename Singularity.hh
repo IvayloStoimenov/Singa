@@ -1,4 +1,4 @@
-Bootstrap:shub
+Bootstrap:docker
 From:ubuntu
 
 %help
