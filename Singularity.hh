@@ -18,6 +18,11 @@ echo "This section happens once after bootstrap to build the image."
 ls
 mkdir -p /dia
 ls
-cp Singa /dia/Singa
-cp Singa.specs /dia/Singa.specs
-chmod u+x /dia/Singa
+echo "Content of dia"
+cd dia
+ls
+cd ..
+echo "content of singularity"
+cd singularity
+ls
+cd ..
