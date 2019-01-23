@@ -1,13 +1,16 @@
-Bootstrap:docker
-From:ubuntu:latest  
+Bootstrap:shub
+From:ubuntu
+
+%help
+This is the place for basic help.
 
 %labels
-MAINTAINER Vanessasaur
-SPECIES Dinosaur
+MAINTAINER Ivast
 
 %runscript
 echo "This gets run when you run the image!" 
-exec /bin/bash /dia/Singa/Singa
+cd /dia/Singa
+exec /bin/bash ./Singa
 
 %post  
 echo "This section happens once after bootstrap to build the image."  
@@ -21,4 +24,4 @@ cd /dia
 git clone https://github.com/IvayloStoimenov/Singa.git
 ls
 cd Singa
-chmod u+x Singa 
+chmod +x Singa 
