@@ -15,4 +15,4 @@ exec /bin/bash /ls
 
 %post  
 echo "This section happens once after bootstrap to build the image."  
-ll
+ls
