@@ -10,7 +10,7 @@ MAINTAINER Ivast
 %runscript
 echo "This gets run when you run the image!" 
 cd /dia/Singa
-exec /bin/bash ./Singa
+exec /bin/bash Singa
 
 %post  
 echo "This section happens once after bootstrap to build the image."  
