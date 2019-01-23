@@ -11,8 +11,8 @@ export RAWR_BASE
 
 %runscript
 echo "This gets run when you run the image!" 
-exec /bin/bash /Singa  
+exec /bin/bash /ls 
 
 %post  
 echo "This section happens once after bootstrap to build the image."  
-chmod u+x Singa
+ll
