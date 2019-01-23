@@ -1,28 +1,21 @@
-Bootstrap:docker  
+Bootstrap:shub
 From:ubuntu:latest  
 
 %labels
-MAINTAINER Vanessasaur
-SPECIES Dinosaur
-
-%environment
-RAWR_BASE=/dia
-export RAWR_BASE
-
-%runscript
-echo "This gets run when you run the image!" 
-exec /bin/bash /dia/Singa
+MAINTAINER Ivast
 
 %post  
 echo "This section happens once after bootstrap to build the image."  
-ls
-mkdir -p /dia
-ls
-echo "Content of dia"
-cd dia
-ls
-cd ..
-echo "content of singularity"
-cd singularity
-ls
-cd ..
+apt-get update
+apt-get install -y build-essential
+apt-get install -y wget git curl
+apt-get install -y apt-transport-https
+
+cd /opt
+git clone https://github.com/IvayloStoimenov/Singa.git
+
+
+%runscript
+echo "This gets run when you run the image!" 
+exec /bin/bash /opt/Singa
+
