@@ -10,6 +10,7 @@ MAINTAINER Ivast
 %runscript
 echo "This gets run when you run the image!" 
 cd /dia/Singa
+ls
 exec /bin/bash Singa
 
 %post  
