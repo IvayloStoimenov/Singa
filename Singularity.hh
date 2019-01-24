@@ -24,4 +24,5 @@ cd /dia
 git clone https://github.com/IvayloStoimenov/Singa.git
 ls
 cd Singa
+ls
 chmod +x Singa 
