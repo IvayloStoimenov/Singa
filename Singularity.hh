@@ -11,7 +11,7 @@ MAINTAINER Ivast
 echo "This gets run when you run the image!" 
 cd /dia/Singa
 ls -l
-exec /bin/bash Singa
+./Singa
 
 %post  
 echo "This section happens once after bootstrap to build the image."  
