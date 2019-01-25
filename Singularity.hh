@@ -9,16 +9,12 @@ MAINTAINER Ivast
 
 %runscript
 echo "This gets run when you run the image!" 
-cd /dia/Singa
+cd /Singa
 ls -l
 ./Singa "$@"
 
 %post  
 echo "This section happens once after bootstrap to build the image."  
-apt-get update
-apt-get install -y build-essential
-apt-get install -y wget git curl
-mkdir -p /dia
-cd /dia
+apt-get update && apt-get install -y git
 git clone https://github.com/IvayloStoimenov/Singa.git
 chmod +x ./Singa/Singa 
