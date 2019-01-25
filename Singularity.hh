@@ -1,5 +1,5 @@
 Bootstrap:docker
-From:ubuntu
+From:ubuntu:16.04
 
 %help
 This is the place for basic help.
@@ -11,8 +11,7 @@ MAINTAINER Ivast
 echo "This gets run when you run the image!" 
 cd /dia/Singa
 ls -l
-./Singa
-ls -l
+./Singa "$@"
 
 %post  
 echo "This section happens once after bootstrap to build the image."  
